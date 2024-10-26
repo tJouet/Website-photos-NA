@@ -1,12 +1,17 @@
 "use client"
 import { useState } from 'react';
 
-const BurgerMenu = ({ onToggle }) => {
+interface BurgerMenuProps{
+onToggle:(arg0: boolean)=> void
+}
+
+const BurgerMenu:React.FC<BurgerMenuProps> = ({ onToggle }) => {
     const [isOpen, setIsOpen] = useState(false);
+    
   const toggleMenu = () => {
     const newState = !isOpen;
     setIsOpen(newState);
-    onToggle(newState); // Appelle la fonction pour informer le parent
+    onToggle(newState); 
   };
 
   return (
