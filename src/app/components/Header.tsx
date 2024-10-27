@@ -25,15 +25,13 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  const gradientOpacity = Math.min(scrollY / 100, 1);
   return (
     <>
       <header
         className="fixed top-0 left-0 right-0 w-full pb-2  flex flex-row justify-center items-center border-b-2 border-white z-[90]"
         style={{
-          background:
-            scrollY > 0 || isOpen
-              ? "linear-gradient(to bottom, #1D1D1D,#1D1D1D 95%, rgba(29, 29, 29, 0) 99%)"
-              : "transparent",
+          background: `linear-gradient(to bottom, rgba(29, 29, 29, ${gradientOpacity}), rgba(29, 29, 29, ${gradientOpacity}) 95%, rgba(29, 29, 29, 0) 99%)`,
         }}
       >
         <div

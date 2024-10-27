@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-pattern": "url('/images/picHero.jpg')",
+      },
       colors: {
         backgroundGrey: "#1D1D1D",
       },

@@ -6,13 +6,12 @@ import AlbumDisplayCarousel from "../atoms/AlbumDisplayCarousel";
 const data = {
   albums: [
     {
-      title: "Garorock 2023",
+      title: "La Relache 2024",
       description: "pictures I took in garorock's 2023 edition.",
       images: [
-        "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+        "/images/relache03_07/P1260179.jpg",
+        "/images/relache03_07/P1260206.jpg",
+        "/images/relache03_07/P1260245.jpg",
       ],
     },
     {
@@ -38,7 +37,6 @@ const data = {
   ],
 };
 
-//Creer un fake date avec un [{src:"src"(trouver comment faire une preview de toutes les photos), description:{description}, albumTitle:'title'}]  remplacer les image simples dans le map ci dessous par des "albums" à ouvrir au clic
 const CarouselComp = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);

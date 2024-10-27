@@ -36,7 +36,9 @@ const AlbumDisplayCarousel: React.FC<AlbumDisplayCarousel> = ({
           <div key={index} className={getClassNames(index, isActive)}>
             <div className="absolute p-3 inset-0 bg-gradient-to-b from-black/60 to-transparent rounded-md ">
               {isActive && (
-                <p className="animate-slide-in-left">{album.title}</p>
+                <p className="animate-slide-in-left leading-5 pr-6">
+                  {album.title}
+                </p>
               )}
             </div>
             <img

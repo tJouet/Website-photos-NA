@@ -33,9 +33,9 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ onToggle }) => {
         className={`${isOpen ? "block" : "hidden"} md:flex md:items-center `}
       >
         <nav className="text-[20px] md:flex md:flex-row md:justify-evenly w-screen  font-semibold  items-end flex flex-col mr-6 md:mr-0 md:mt-2">
-          <a className="block mt-4 md:inline-block md:mt-0 ">Home</a>
+          <a className="block mt-4 md:inline-block md:mt-0 ">Pictures</a>
 
-          <a className="block mt-4 md:inline-block md:mt-0 ">About</a>
+          <a className="block mt-4 md:inline-block md:mt-0 ">Videos</a>
 
           <a className="block mt-4 md:inline-block md:mt-0 ">Contact</a>
         </nav>
