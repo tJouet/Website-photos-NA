@@ -1,9 +1,8 @@
 "use client";
-
-import React, { useState } from "react";
-
+import React from "react";
+import { useAppContext } from "@/AppContext";
 interface AlbumDisplayCarousel {
-  album: { title: string; description: string; images: string[] };
+  album: { id: number; title: string; description: string; images: string[] };
   isActive: boolean;
 }
 
@@ -11,6 +10,7 @@ const AlbumDisplayCarousel: React.FC<AlbumDisplayCarousel> = ({
   album,
   isActive,
 }) => {
+  const { handleSelectedAlbum } = useAppContext();
   const getClassNames = (index: number, isActive: boolean) => {
     const baseStyles =
       "absolute h-[350px] w-[200px] md:h-[600px] md:w-[1080px] rounded-md";
@@ -29,8 +29,12 @@ const AlbumDisplayCarousel: React.FC<AlbumDisplayCarousel> = ({
         : `${baseStyles} top-8 left-8 z-20 animate-close-on-leave-2`;
     }
   };
+
   return (
-    <div className="relative h-[450px] md:h-[650px] w-[200px] md:w-[1080px] ">
+    <div
+      className="relative h-[450px] md:h-[650px] w-[200px] md:w-[1080px]"
+      onClick={() => handleSelectedAlbum(album.id)}
+    >
       {album.images.slice(0, 3).map((image, index) => (
         <>
           <div key={index} className={getClassNames(index, isActive)}>

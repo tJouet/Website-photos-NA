@@ -15,9 +15,9 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ onToggle }) => {
   };
 
   return (
-    <div className="justify-end items-end flex flex-col w-screen py-6">
+    <div className="justify-end items-end flex flex-col w-screen py-6 ">
       <button
-        className="md:hidden flex items-center   px-3 py-2 border rounded border-gray-600 hover:text-gray-700 hover:border-gray-700 mr-6"
+        className="md:hidden flex items-center px-3 py-2 border rounded border-gray-600 hover:text-gray-700 hover:border-gray-700 mr-6"
         onClick={toggleMenu}
       >
         <svg

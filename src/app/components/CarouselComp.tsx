@@ -1,46 +1,16 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import "../components/styles.css";
+import { useAppContext } from "@/AppContext";
 import AlbumDisplayCarousel from "../atoms/AlbumDisplayCarousel";
-
-const data = {
-  albums: [
-    {
-      title: "La Relache 2024",
-      description: "pictures I took in garorock's 2023 edition.",
-      images: [
-        "/images/relache03_07/P1260179.jpg",
-        "/images/relache03_07/P1260206.jpg",
-        "/images/relache03_07/P1260245.jpg",
-      ],
-    },
-    {
-      title: "Les vieilles charrues 2023",
-      description: "pictures I took in Les vieilles charrues 2023 edition.",
-      images: [
-        "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-      ],
-    },
-    {
-      title: "Hellfest 2023",
-      description: "pictures I took in Hellfest's 2023 edition.",
-      images: [
-        "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-        "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-      ],
-    },
-  ],
-};
+import Title from "../atoms/Title";
 
 const CarouselComp = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const { data } = useAppContext();
 
   const handleScroll = () => {
     if (containerRef.current && itemRefs.current) {
@@ -71,23 +41,26 @@ const CarouselComp = () => {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="snap-mandatory snap-x flex flex-row w-full overflow-x-auto  justify-between scroll-smooth no-scrollbar"
-    >
-      {data.albums.map((album, index) => (
-        <div
-          ref={(el) => (itemRefs.current[index] = el)}
-          className="snap-center shrink-0 first:pl-12 md:first:pl-36 px-8 last:pr-16 md:last:pr-36"
-          key={index}
-        >
-          <AlbumDisplayCarousel
-            album={album}
-            isActive={index === activeIndex}
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      <Title content="Gallery" subText="Featured content:" />
+      <div
+        ref={containerRef}
+        className="snap-mandatory snap-x flex flex-row w-full overflow-x-auto  justify-between scroll-smooth no-scrollbar"
+      >
+        {data.map((album, index) => (
+          <div
+            ref={(el) => (itemRefs.current[index] = el)}
+            className="snap-center shrink-0 first:pl-12 md:first:pl-36 px-8 last:pr-16 md:last:pr-36"
+            key={index}
+          >
+            <AlbumDisplayCarousel
+              album={album}
+              isActive={index === activeIndex}
+            />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
