@@ -12,9 +12,10 @@ const FullAlbumDisplay: React.FC<FullAlbumDisplay> = ({ id }) => {
   const { handleSelectedAlbum } = useAppContext();
   return (
     <>
-      <div>
+      <div className="w-full flex flex-row justify-between px-16 mt-6">
+        <p className="text-[32px]">{album?.title}</p>
+
         <button onClick={() => handleSelectedAlbum(null)}>Click here</button>
-        <p>Test {album?.description}</p>
       </div>
     </>
   );
