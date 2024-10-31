@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        "100": "100",
+      },
       backgroundImage: {
         "hero-pattern": "url('/images/picHero.jpg')",
       },

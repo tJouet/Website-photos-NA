@@ -17,7 +17,10 @@ interface AlbumData {
 interface AppContextProps {
   handleSelectedAlbum: (id: number | null) => void;
   getAlbumById: (id: number) => AlbumData | undefined;
+  handleModal: (content: string | null) => void;
+  selectedPicture: string | null;
   selectedAlbum: number | null;
+  modalPosition?: { x: number; y: number };
   data: AlbumData[];
   loading: boolean;
   error: string | null;
@@ -29,6 +32,11 @@ export const AppContextProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [selectedAlbum, setSelectedAlbum] = useState<number | null>(null);
+  const [selectedPicture, setSelectedPicture] = useState<string | null>(null);
+  const [modalPosition, setModalPosition] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
+  });
   const [data, setData] = useState<AlbumData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -50,19 +58,28 @@ export const AppContextProvider: React.FC<{ children: ReactNode }> = ({
     fetchData();
   }, []);
 
-  const handleSelectedAlbum = (id: number) => {
+  const handleSelectedAlbum = (id: number | null) => {
     setSelectedAlbum(id);
-    console.log(id, "selected");
   };
   const getAlbumById = (id: number): AlbumData | undefined => {
     return data.find((album) => album.id === id);
+  };
+  const handleModal = (
+    content: string | null,
+    position?: { x: number; y: number }
+  ) => {
+    setSelectedPicture(content);
+    setModalPosition(position || { x: 0, y: 0 });
   };
   return (
     <AppContext.Provider
       value={{
         handleSelectedAlbum,
+        handleModal,
         getAlbumById,
         selectedAlbum,
+        selectedPicture,
+        modalPosition,
         data,
         loading,
         error,
