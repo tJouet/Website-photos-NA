@@ -12,6 +12,7 @@ export default function Home() {
       <Hero />
       <CarouselComp />
       {selectedAlbum ? <FullAlbumDisplay id={selectedAlbum} /> : null}
+      <div className="bg-red-500 h-screen"></div>
     </main>
   );
 }

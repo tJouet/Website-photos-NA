@@ -59,6 +59,7 @@ export const AppContextProvider: React.FC<{ children: ReactNode }> = ({
   }, []);
 
   const handleSelectedAlbum = (id: number | null) => {
+    setSelectedPicture(null);
     setSelectedAlbum(id);
   };
   const getAlbumById = (id: number): AlbumData | undefined => {

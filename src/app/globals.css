@@ -19,6 +19,23 @@
   }
 }
 
+.custom-modal .modal-content {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.custom-modal .modal-dialog {
+  max-width: none !important;
+  width: auto !important;
+}
+
+.custom-modal .modal-body {
+  padding: 0 !important;
+}
+
 html,
 body,
 div,

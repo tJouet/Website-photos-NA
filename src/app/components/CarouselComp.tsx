@@ -7,10 +7,18 @@ import Title from "../atoms/Title";
 
 const CarouselComp = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const [hasScrolled, setHasScrolled] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { data } = useAppContext();
+
+  function scrollToFirstRow(pixels) {
+    setHasScrolled(true);
+    window.scrollTo({
+      top: window.scrollY + pixels, // Ajoute les pixels à la position actuelle
+      behavior: "smooth", // Défilement fluide
+    });
+  }
 
   const handleScroll = () => {
     if (containerRef.current && itemRefs.current) {
@@ -52,6 +60,7 @@ const CarouselComp = () => {
             ref={(el) => (itemRefs.current[index] = el)}
             className="snap-center shrink-0 first:pl-12 md:first:pl-36 px-8 last:pr-16 md:last:pr-36"
             key={index}
+            onClick={!hasScrolled ? () => scrollToFirstRow(450) : null}
           >
             <AlbumDisplayCarousel
               album={album}
