@@ -12,11 +12,11 @@ const CarouselComp = () => {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { data } = useAppContext();
 
-  function scrollToFirstRow(pixels) {
+  function scrollToFirstRow(pixels: number) {
     setHasScrolled(true);
     window.scrollTo({
-      top: window.scrollY + pixels, // Ajoute les pixels à la position actuelle
-      behavior: "smooth", // Défilement fluide
+      top: window.scrollY + pixels,
+      behavior: "smooth",
     });
   }
 
@@ -50,7 +50,7 @@ const CarouselComp = () => {
 
   return (
     <>
-      <Title content="Gallery" subText="Featured content:" />
+      <Title content="Gallery" imageUrl="/images/picHero.jpg" />
       <div
         ref={containerRef}
         className="snap-mandatory snap-x flex flex-row w-full overflow-x-auto  justify-between scroll-smooth no-scrollbar"

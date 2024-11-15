@@ -1,6 +1,12 @@
 "use client";
 
-import { Hero, Header, CarouselComp, FullAlbumDisplay } from "@/app/components";
+import {
+  Hero,
+  Header,
+  CarouselComp,
+  FullAlbumDisplay,
+  VideoComp,
+} from "@/app/components";
 
 import { useAppContext } from "@/AppContext";
 
@@ -12,7 +18,7 @@ export default function Home() {
       <Hero />
       <CarouselComp />
       {selectedAlbum ? <FullAlbumDisplay id={selectedAlbum} /> : null}
-      <div className="bg-red-500 h-screen"></div>
+      <VideoComp />
     </main>
   );
 }
