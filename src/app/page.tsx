@@ -3,7 +3,7 @@
 import {
   Hero,
   Header,
-  CarouselComp,
+  AlbumComp,
   FullAlbumDisplay,
   VideoComp,
 } from "@/app/components";
@@ -16,7 +16,7 @@ export default function Home() {
     <main className="font-Orbitron flex min-h-screen flex-col items-center justify-between bg-backgroundGrey text-white">
       <Header />
       <Hero />
-      <CarouselComp />
+      <AlbumComp />
       {selectedAlbum ? <FullAlbumDisplay id={selectedAlbum} /> : null}
       <VideoComp />
     </main>

@@ -20,6 +20,7 @@ const config: Config = {
       },
       colors: {
         backgroundGrey: "#1D1D1D",
+        darkerGrey: "#0F0F0F",
       },
       fontFamily: {
         Oxanium: ["Oxanium", "sans-serif"],
