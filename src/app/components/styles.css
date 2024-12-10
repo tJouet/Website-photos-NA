@@ -1,27 +1,32 @@
 body {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .fader {
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .fader__slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-  }
-  
-  .fader img {
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-  }
-  
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fader {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fader__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.fader img {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+/* Non webkit browser style */
+.scrollbar-custom {
+  scrollbar-width: thick; /* Largeur fine */
+  scrollbar-color: #1d1d1d #1d1d1d1f; /* Couleurs pouce et piste */
+}

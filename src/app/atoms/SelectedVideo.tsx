@@ -4,7 +4,7 @@ const SelectedVideo = ({ src }: { src?: string }) => {
   }
   return (
     <>
-      <div className="flex flex-col md:w-[75%] w-full h-full">
+      <div className="flex flex-col md:w-[65%] h-full">
         <video
           className="w-full h-full object-cover"
           controls

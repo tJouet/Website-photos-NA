@@ -1,21 +1,23 @@
 import Title from "../atoms/Title";
 import SelectedVideo from "../atoms/SelectedVideo";
-import VideosList from "../atoms/VideosList";
+import VideosListDesktop from "../atoms/VideosListDesktop";
 import useVideoStore from "@/stores/video";
+import VideosListMobile from "../atoms/VideosListMobile";
 
 const VideoComp = () => {
   const { videosData, selectedVideoId } = useVideoStore();
 
   const displayVideo = videosData.find((video) => video.id === selectedVideoId);
-  console.log(videosData, displayVideo);
   return (
     <>
       <Title videoUrl="/videos/samplevid.mp4" content="Videos" />
       <div className="px-12">
         <div className=" w-full flex flex-row">
-          <div className="md:h-[600px] flex md:flex-row flex-col w-full justify-center ">
+          <div className="md:h-[540px]  flex md:flex-row flex-col w-full justify-center items-center ">
             <SelectedVideo src={displayVideo?.src} />
-            <VideosList />
+            <div className="h-full w-[35%] md:block hidden ">
+              <VideosListDesktop />
+            </div>
           </div>
         </div>
         <div className="md:w-[70%] w-full">
@@ -23,6 +25,9 @@ const VideoComp = () => {
           <h4 className="pt-6">{displayVideo?.type}</h4>
           <p>{displayVideo?.description}</p>
         </div>
+      </div>
+      <div className="md:hidden block">
+        <VideosListMobile />
       </div>
     </>
   );

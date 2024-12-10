@@ -6,7 +6,6 @@ function ImageModal(props) {
   useEffect(() => {
     import("bootstrap/dist/css/bootstrap.min.css");
   }, []);
-  console.log(props.props);
   return (
     <Modal
       {...props}
