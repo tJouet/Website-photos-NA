@@ -15,7 +15,6 @@ interface VideoStoreState {
   loadingVideos: boolean;
   loadingVideosError: string | null;
   selectedVideoId: number;
-  getVideosData: () => Promise<void>;
   selectVideoId: (id: number) => void;
 }
 
@@ -41,7 +40,6 @@ const useVideoStore = create<VideoStoreState>((set) => {
     loadingVideos: false,
     loadingVideosError: null,
     selectedVideoId: 1,
-    getVideosData: fetchVideosData,
     selectVideoId: (id: number) => set({ selectedVideoId: id }),
   };
 });

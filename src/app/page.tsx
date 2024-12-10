@@ -6,6 +6,7 @@ import {
   AlbumComp,
   FullAlbumDisplay,
   VideoComp,
+  ContactMeComp,
 } from "@/app/components";
 
 import { useAppContext } from "@/AppContext";
@@ -19,6 +20,7 @@ export default function Home() {
       <AlbumComp />
       {selectedAlbum ? <FullAlbumDisplay id={selectedAlbum} /> : null}
       <VideoComp />
+      <ContactMeComp />
     </main>
   );
 }

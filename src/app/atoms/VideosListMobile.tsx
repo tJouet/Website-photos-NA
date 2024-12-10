@@ -3,7 +3,6 @@ import useVideoStore from "@/stores/video";
 const VideosListMobile = () => {
   const { videosData, selectVideoId } = useVideoStore();
 
-  console.log(videosData);
   return (
     <div className="snap-mandatory snap-x flex flex-row w-full overflow-x-auto scroll-smooth no-scrollbar mt-8">
       {videosData.map((item, index) => (
