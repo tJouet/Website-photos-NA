@@ -20,7 +20,6 @@ const ContactMeComp = () => {
     }));
   };
 
-  //TO DO API call here
   const handleSubmit = (e) => {
     e.preventDefault();
     sendForm(formData);
@@ -71,7 +70,7 @@ const ContactMeComp = () => {
                 Sélectionnez un objet
               </option>
               <option value="priseRdv">Prendre rendez-vous</option>
-              <option value="informations">Demande d'informations</option>
+              <option value="informations">Demande d&apos;informations</option>
               <option value="misc">Autre</option>
             </select>
           </div>

@@ -25,14 +25,18 @@ const AlbumComp = () => {
   const handleScroll = () => {
     if (containerRef.current && itemRefs.current) {
       const containerCenter = containerRef.current.offsetWidth / 2;
-      const distances = itemRefs.current.map((item) => {
-        if (!item) return Number.MAX_VALUE;
-        const itemCenter =
-          item.offsetLeft +
-          item.offsetWidth / 2 -
-          containerRef.current.scrollLeft;
-        return Math.abs(containerCenter - itemCenter);
-      });
+      const distances = itemRefs.current
+        .map((item) => {
+          if (!item) return Number.MAX_VALUE;
+          if (containerRef.current != null) {
+            const itemCenter =
+              item.offsetLeft +
+              item.offsetWidth / 2 -
+              containerRef.current.scrollLeft;
+            return Math.abs(containerCenter - itemCenter);
+          }
+        })
+        .filter((distance): distance is number => distance !== undefined);
       const newActiveIndex = distances.indexOf(Math.min(...distances));
       setActiveIndex(newActiveIndex);
     }
@@ -46,6 +50,7 @@ const AlbumComp = () => {
 
   useEffect(() => {
     const container = containerRef.current;
+    if (!container) return;
     if (container) {
       container.addEventListener("scroll", handleScroll);
     }

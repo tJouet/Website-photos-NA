@@ -1,5 +1,6 @@
 import useVideoStore from "@/stores/video";
 import "../components/styles.css";
+import Image from "next/image";
 
 const VideosListDesktop = () => {
   const { videosData, selectVideoId } = useVideoStore();
@@ -14,9 +15,12 @@ const VideosListDesktop = () => {
               className="flex flex-row items-center p-4 h-full"
               onClick={() => selectVideoId(item.id)}
             >
-              <img
+              <Image
                 src={item.previewImg}
                 className="rounded-md w-[40%] h-full"
+                width={500}
+                height={500}
+                alt={`Preview image for the video ${item.title}`}
               />
               <div className="w-[60%] px-4 py-1 self-start ">
                 <h4 className=" truncate">{item.title}</h4>

@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "PROJECT GRAFFITI",
+    "src": "https://www.youtube.com/watch?v=6dVY2WIzCzk",
+    "type": "Projet Perso",
+    "previewImg": "/images/why-not-preview.png",
+    "description": "Captation, Montage et Étalonnage par Nicolas Acquaviva. Projet personnel et exercice de sorti de formation. Certification de Montage vidéo obtenue avec cette vidéo.",
+    "date": "08/07/2024"
+  },
+  {
+    "id": 2,
+    "title": "THE BARKING SPIDERS- LIVE ROCK SCHOOL BARBEY",
+    "src": "https://www.youtube.com/watch?v=eOOQtQKn4Xc",
+    "type": "CAPTATION LIVE",
+    "previewImg": "/images/relache-preview.png",
+    "description": "Captation, Montage et Étalonnage par Nicolas Acquaviva. En collaboration avec le groupe 'THE BARKING SPIDERS' sur le titre 'LOVE IS LEAVING' pour la final d'un Tremplin à la Rock School Barbey de Bordeaux.",
+    "date": "16/09/2024"
+  },
+  {
+    "id": 3,
+    "title": "PURRS - LIVE KRAKATOA",
+    "src": "https://www.youtube.com/watch?v=K_e8pD8sTYM",
+    "type": "CAPTATION LIVE",
+    "previewImg": "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "description": "Captation vidéo par  Nicolas Acquaviva, Robin Rauner et Roger Merpillat. En collaboration avec le groupe 'PURRS' sur le titre 'TO BE ENJOYED' lors d'un live au Krakatoa à Mérignac. Montage et Étalonnage par Nicolas Acquaviva.",
+    "date": "19/06/2024"
+  },
+  {
+    "id": 4,
+    "title": "STONER BUD'S - CAVE SESSION PART 1",
+    "src": "https://www.youtube.com/watch?v=ZOEfe42yWbk",
+    "type": "LIVE SESSION",
+    "previewImg": "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "description": "Captation vidéo par Alice Zapata et Montage, Étalonnage par Nicolas Acquaviva. En collaboration avec le groupe 'STONER BUD'S' sur '1: RAINY DAY et YOU KNOW' '2: TRAPPED et STAMPEDE', filmé dans les locaux de l'association Allez les filles à Bordeaux.",
+    "date": "17/10/2024"
+  },
+  {
+    "id": 5,
+    "title": "STONER BUD'S - CAVE SESSION PART 2",
+    "src": "https://www.youtube.com/watch?v=F3vOQEGhZM4",
+    "type": "LIVE SESSION",
+    "previewImg": "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "description": "Captation vidéo par Alice Zapata et Montage, Étalonnage par Nicolas Acquaviva. En collaboration avec le groupe 'STONER BUD'S' sur '1: RAINY DAY et YOU KNOW' '2: TRAPPED et STAMPEDE', filmé dans les locaux de l'association Allez les filles à Bordeaux.",
+    "date": "17/10/2024"
+  },
+  {
+    "id": 6,
+    "title": "RÉELS WHY NOT x DEUS",
+    "src": "https://www.youtube.com/shorts/MitVCIZ4GdU",
+    "type": "RÉELS et SHORTS",
+    "previewImg": "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "description": "Captation vidéo, Montage et Étalonnage par Nicolas Acquaviva. En collaboration avec l'association 'WHY NOT?' lors d'une soirée concert organisé au magasin DEUS à Bordeaux avec les groupes 'PURRS' et 'WE HATE YOU PLEASE DIE'.",
+    "date": "11/11/2024"
+  },
+  {
+    "id": 7,
+    "title": "RÉELS FESTIVAL RELACHE",
+    "src": "https://www.youtube.com/shorts/5x0psgkNf70",
+    "type": "RÉELS et SHORTS",
+    "previewImg": "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "description": "- Captation vidéo, Montage et Étalonnage par Nicolas Acquaviva. En collaboration avec l'association 'ALLEZ LES FILLES' lors du Festival RELACHE organisé sur Bordeaux au Square Dom Bedos.",
+    "date": "11/11/2024"
+  }
+]

@@ -1,4 +1,5 @@
 import useVideoStore from "@/stores/video";
+import Image from "next/image";
 
 const VideosListMobile = () => {
   const { videosData, selectVideoId } = useVideoStore();
@@ -14,7 +15,7 @@ const VideosListMobile = () => {
           <h4 className="absolute py-2 px-2 w-[140px] truncate drop-shadow-titleDropShadow">
             {item.title}
           </h4>
-          <img
+          <Image
             src={item.previewImg}
             className="object-cover rounded-md h-[220px] w-[140px]"
             alt={`${item.title}`}

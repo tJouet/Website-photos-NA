@@ -17,9 +17,9 @@ export default function Home() {
     <main className="font-Orbitron flex min-h-screen flex-col items-center justify-between bg-backgroundGrey text-white">
       <Header />
       <Hero />
+      <VideoComp />
       <AlbumComp />
       {selectedAlbum ? <FullAlbumDisplay id={selectedAlbum} /> : null}
-      <VideoComp />
       <ContactMeComp />
     </main>
   );

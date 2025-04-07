@@ -1,6 +1,7 @@
 "use client";
 
 import { useAppContext } from "@/AppContext";
+import Image from "next/image";
 
 import ImageModal from "../atoms/ImageModal";
 interface FullAlbumDisplay {
@@ -28,11 +29,12 @@ const FullAlbumDisplay: React.FC<FullAlbumDisplay> = ({ id }) => {
         </div>
         <div className="w-full flex flex-row flex-wrap gap-6 mt-8 justify-start">
           {album?.images.map((image, index) => (
-            <img
+            <Image
               onClick={() => handleModal(image)}
               key={index}
               className="md:max-h-[120px] md:max-w-[120px] max-h-[90px] max-w-[90px] object-contain overflow-hidden"
               src={image}
+              alt={`Iimage from the album : ${album?.title}`}
             />
           ))}
         </div>

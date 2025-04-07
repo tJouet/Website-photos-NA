@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import Modal from "react-bootstrap/Modal";
+import Modal, { ModalProps } from "react-bootstrap/Modal";
+import Image from "next/image";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function ImageModal(props) {
-  //Isolating the bootstrap style
-  useEffect(() => {
-    import("bootstrap/dist/css/bootstrap.min.css");
-  }, []);
+function ImageModal(props: ModalProps) {
   return (
     <Modal
       {...props}
@@ -15,10 +13,11 @@ function ImageModal(props) {
       dialogClassName="custom-modal"
     >
       <Modal.Dialog className="bg-transparent border-0 p-0 m-0 shadow-none">
-        <img
+        <Image
           src={`${props.props}`}
           className="max-h-[750px] object-contain bg-transparent border-none"
-        ></img>
+          alt="The selected image is on your whole screen"
+        />
       </Modal.Dialog>
     </Modal>
   );

@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { useAppContext } from "@/AppContext";
+import Image from "next/image";
+
 interface AlbumDisplayCarousel {
   album: { id: number; title: string; description: string; images: string[] };
   isActive: boolean;
@@ -45,7 +47,7 @@ const AlbumDisplayCarousel: React.FC<AlbumDisplayCarousel> = ({
                 </p>
               )}
             </div>
-            <img
+            <Image
               src={image}
               className="h-full w-full object-cover rounded-md"
               alt={`${album.title} image_${index + 1}`}

@@ -10,7 +10,7 @@ const VideoComp = () => {
   const displayVideo = videosData.find((video) => video.id === selectedVideoId);
   return (
     <>
-      <Title videoUrl="/videos/samplevid.mp4" content="Videos" />
+      <Title videoUrl="/videos/live-krakatoa-purrs.mp4" content="Videos" />
       <div className="px-12">
         <div className=" w-full flex flex-row">
           <div className="md:h-[540px]  flex md:flex-row flex-col w-full justify-center items-center ">

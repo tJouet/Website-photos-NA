@@ -22,7 +22,7 @@ const useVideoStore = create<VideoStoreState>((set) => {
   const fetchVideosData = async () => {
     set({ loadingVideos: true, loadingVideosError: null });
     try {
-      const response = await fetch("/videoData.json");
+      const response = await fetch("../data/videoData.json");
       const data: Video[] = await response.json();
       set({ videosData: data, loadingVideos: false });
     } catch (error) {

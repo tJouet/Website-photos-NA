@@ -5,12 +5,7 @@ const SelectedVideo = ({ src }: { src?: string }) => {
   return (
     <>
       <div className="flex flex-col md:w-[65%] h-full">
-        <video
-          className="w-full h-full object-cover"
-          controls
-          key={src}
-          autoPlay
-        >
+        <video className="w-full h-full " controls key={src}>
           <source src={src} type="video/mp4" />
         </video>
       </div>
